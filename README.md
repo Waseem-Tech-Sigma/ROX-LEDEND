@@ -27,3 +27,4 @@
 ║    Only Real Allowed    ✅   
 ──────────❂
 ─────────────❂
+<img src="https://i.imgur.com/dBaSKWF.gif" height="0" width="100%">
