@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ROX亗๛LEGEND</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .text {
+      font-size: 2.5rem;
+      border-right: 2px solid #00ffcc;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="text" id="hackText"></div>
+
+  <script>
+    const targetText = "ROX-LEGEND";
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let frame = 0;
+    const el = document.getElementById("hackText");
+
+    function hackerEffect() {
+      let output = "";
+      for (let i = 0; i < targetText.length; i++) {
+        if (i < frame) {
+          output += targetText[i];
+        } else {
+ output += characters[Math.floor(Math.random() * characters.length)];
+        }
+      }
+      el.textContent = output;
+      frame++;
+      if (frame <= targetText.length) {
+        setTimeout(hackerEffect, 100);
+      } else {
+        setTimeout(() => {
+          frame = 0;
+          hackerEffect();
+        }, 2000); // Restart after 2 sec pause
+      }
+    }
+
+    hackerEffect();
+  </script>
+</body>
+</html>
+```
